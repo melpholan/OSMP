@@ -23,6 +23,7 @@ public class PersonalController {
 
         System.out.println(personalService.listPersonal());
 
+
         map.put("personal", new Personal());
         map.put("personalList", personalService.listPersonal());
 

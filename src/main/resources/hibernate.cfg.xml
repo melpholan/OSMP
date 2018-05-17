@@ -5,6 +5,7 @@
 
 <hibernate-configuration>
     <session-factory>
+
         <mapping class="ru.melpholan.osmp.domain.Personal" />
         <mapping class="ru.melpholan.osmp.domain.Adreses"/>
         <mapping class="ru.melpholan.osmp.domain.Passport"/>
@@ -15,5 +16,6 @@
         <mapping class="ru.melpholan.osmp.domain.DoctorsErrors"/>
         <mapping class="ru.melpholan.osmp.domain.ResultOfDoctorsCalls"/>
         <mapping class="ru.melpholan.osmp.domain.GroupResultOfDoctorsCalls"/>
+
     </session-factory>
 </hibernate-configuration>
