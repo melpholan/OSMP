@@ -7,12 +7,15 @@
 </head>
 <body>
 
-<table>
+<table border="2px">
+
     <tr>
+
         <th>Name</th>
         <th>Surname</th>
         <th>Famil</th>
         <th>ID</th>
+
     </tr>
 
     <c:forEach var="itm" items="${personalList}">

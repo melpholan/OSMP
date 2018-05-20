@@ -22,8 +22,6 @@ public class PersonalListController {
     @RequestMapping("/persList")
     public String listContacts(ModelMap map) {
 
-        System.out.println(personalService.listPersonal());
-
         map.addAttribute("personalList", personalService.listPersonal());
 
         return "personalList";
