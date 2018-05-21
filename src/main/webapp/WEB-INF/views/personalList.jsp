@@ -7,6 +7,17 @@
 </head>
 <body>
 
+<span>
+    <a href="/savecalls/create">Записать вызов</a>
+</span>
+<span>
+    <a href="/prem/premium">Посчитать премию</a>
+</span>
+
+<span>
+    <br/>
+</span>
+
 <table border="2px">
 
     <tr>
@@ -32,6 +43,7 @@
     </c:forEach>
 
 </table>
+
 
 </body>
 </html>

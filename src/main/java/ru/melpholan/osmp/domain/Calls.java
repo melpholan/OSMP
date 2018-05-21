@@ -2,7 +2,7 @@ package ru.melpholan.osmp.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 
 @Entity
@@ -22,15 +22,15 @@ public class Calls implements Serializable {
         this.idCalls = idCalls;
     }
 
-    //@Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.DATE)
     @Column(name = "dateOfCall")
-    private java.sql.Date dateOfCall;
+    private Date dateOfCall;
 
     public Date getDateOfCall() {
         return dateOfCall;
     }
 
-    public void setDateOfCall(java.sql.Date dateOfCall) {
+    public void setDateOfCall(Date dateOfCall) {
         this.dateOfCall = dateOfCall;
     }
 

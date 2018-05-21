@@ -6,7 +6,8 @@ import ru.melpholan.osmp.dao.IPersonalDao;
 import ru.melpholan.osmp.domain.Personal;
 
 @Repository
-public class PersonalDaoImpl extends GenericHibernateDao<Personal> implements IPersonalDao {
+public class PersonalDaoImpl extends GenericHibernateDao<Personal>
+        implements IPersonalDao {
 
     public PersonalDaoImpl(){
         setClazz(Personal.class);

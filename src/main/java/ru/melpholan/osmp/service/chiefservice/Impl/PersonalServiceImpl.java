@@ -40,6 +40,11 @@ public class PersonalServiceImpl implements IPersonalService {
     }
 
     @Override
+    public Personal getPersonalByID(Long ID) {
+        return null;
+    }
+
+    @Override
     public void updatePersonal(Personal personal, String name, String surname, String patronymic) {
 
     }

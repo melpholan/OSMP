@@ -38,12 +38,14 @@ public abstract class AbstractHibernateDao <T extends Serializable>{
     }
 
 
+    @SuppressWarnings("unchecked")
     public List< T > findAll(){
         return getCurrentSession().createQuery( "from " + clazz.getName() ).list();
     }
 
-    public void create( T entity ){
-        getCurrentSession().persist( entity );
+    public Serializable create( T entity ){
+        Serializable serializable = getCurrentSession().save( entity );
+        return serializable;
     }
 
     public void update( T entity ){

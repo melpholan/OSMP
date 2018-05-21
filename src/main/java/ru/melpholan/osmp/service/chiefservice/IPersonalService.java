@@ -14,6 +14,8 @@ public interface IPersonalService {
 
     Personal findPersonal(Personal personal);
 
+    Personal getPersonalByID(Long ID);
+
     void removePersonal(Long ID);
 
     void updatePersonal(Personal personal, String name, String surname, String patronymic);

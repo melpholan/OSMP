@@ -59,7 +59,7 @@ public class PremCounter {
 
     }
 
-    private static void getPremiumSummList(Map<Long, Result> resultMap, final double ballsCoast){
+    public static void getPremiumSummList(Map<Long, Result> resultMap, final double ballsCoast){
 
        // Map<Long, Result> moneyMap = new HashMap<>();
 
@@ -78,7 +78,7 @@ public class PremCounter {
     }
 
 
-    private static double ballsCoaster(Map<Long, Result> resultMap, final int money){
+    public static double ballsCoaster(Map<Long, Result> resultMap, final int money){
 
         double ballsSum = 0;
         Collection<Result> values = resultMap.values();
@@ -91,7 +91,7 @@ public class PremCounter {
 
     }
 
-    private static void ballsMultiplier(Map<Long, Result> resultMap,
+    public static void ballsMultiplier(Map<Long, Result> resultMap,
                                                      final int callsNorm, final double mulKofficient){
 
         for (Long key: resultMap.keySet()
@@ -125,7 +125,7 @@ public class PremCounter {
 
 
     //count List of doctors work results
-    private static void countResultList( Map<Long, Result> resultMap, List<Calls> callList, List<Shifts> shiftsList) {
+    public static void countResultList( Map<Long, Result> resultMap, List<Calls> callList, List<Shifts> shiftsList) {
 
 
         resultCounter(resultMap,callList);
@@ -134,22 +134,26 @@ public class PremCounter {
         for (Long ID : resultMap.keySet()
                 ) {
 
+            Integer hours = 0;
             Result result = resultMap.get(ID);
-            Integer hours = hoursMap.get(ID);
-            result.setWorkHours(hours);
-            resultMap.put(ID, result);
+            if ((hours = hoursMap.get(ID)) != null)
+
+                result.setWorkHours(hours);
+                resultMap.put(ID, result);
+        }
 
         }
 
-       // return resultMap;
 
-    }
+
+
 
 
     //count summ hours for doctors
-    private static Map<Long, Integer> hoursCounter(List<Shifts> shiftsList){
+    public static Map<Long, Integer> hoursCounter(List<Shifts> shiftsList){
 
         Map<Long, Integer> shiftsTimeMap = new HashMap<>();
+
 
         for (Shifts shift: shiftsList
                 ) {
@@ -175,7 +179,7 @@ public class PremCounter {
     }
 
     //count Results for doctors
-    private static void resultCounter( Map<Long, Result> resultMap, List<Calls> callList){
+    public static void resultCounter( Map<Long, Result> resultMap, List<Calls> callList){
 
         //Map<Long, Result> resultMap = new HashMap<>();
 
@@ -205,7 +209,7 @@ public class PremCounter {
 
 
     //for summ balls calls and errors
-    private static Result callSummator(Calls call, Result result){
+    public static Result callSummator(Calls call, Result result){
 
         //Result result = new Result();
 
